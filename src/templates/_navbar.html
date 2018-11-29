@@ -1,0 +1,6 @@
+{% load i18n %}
+<li {% if active_link == "home" %}class="active"{% endif %}><a href="{% url 'home' %}">Home</a></li>
+<li {% if active_link == "downloads" %}class="active"{% endif %}><a href="{% url 'downloads' %}">{% trans "Downloads" %}</a></li>
+<li {% if active_link == "standard_devices" %}class="active"{% endif %}><a href="{% url 'registereddevices' %}">{% trans "Standard devices" %}</a></li>
+<li {% if active_link == "first_steps" %}class="active"{% endif %}><a href="{% url 'firststeps' %}">{% trans "First steps" %}</a></li>
+<li {% if active_link == "about" %}class="active"{% endif %}><a href="{% url 'about' %}">{% trans "About" %}</a></li>

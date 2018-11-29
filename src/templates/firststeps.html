@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+
+
+{% block title %}{{ block.super }}Home{% endblock %}
+
+{% block navbar-left %}
+  {% include "_navbar.html" with active_link="first_steps" %}
+{% endblock %}
+
+
+{% block splash %}
+
+{% get_current_language as LANGUAGE_CODE %}
+<!-- Current language: {{ LANGUAGE_CODE }} -->
+
+{% endblock splash %}
+
+{% block extrahead %}
+    <style>
+    .btn {
+    	font-size: 12px;
+    }
+    .container{
+    	position:relative;
+    	top:2em;
+    }
+    .li{
+    	font-size: 18px;
+    }
+    </style>
+{% endblock extrahead %}
+
+{% block container %}
+<!-- Benefits of the Django application -->
+
+<div class="container">
+		<h1>{% trans "Steps to start enjoying " %} {% include "_brandname.html" %}</h1>
+		<p>{% trans "The following steps will guide you through the process of configuring and commissionning a " %} {% include "_brandname.html" %}
+		{% trans " application with the 'official' hardware. This implies the use of a Raspberry PI as the Main unit." %}
+		</p>
+		<div class="list-group">
+			<ul>
+			    <li class="list-group-item">
+			        <h2 class="list-group-item-heading">{% trans "First step: Downloading" %}</h2>
+			        <p class="list-group-item-text">{% trans "Download an image from " %} <a href="{% url 'downloads' %}">{% trans "here" %}</a>.
+			        {% trans "In what follows, this procedure will consider that you downloaded the RaspImage." %}
+					</p>
+			    </li>
+			    <li class="list-group-item">
+			        <h2 class="list-group-item-heading">{% trans "Second step: Creating the OS SD-card" %}</h2>
+			        <p class="list-group-item-text">{% trans "If you downloaded a RaspImage, just unzip the file and copy its contents into the root of a formatted SD-card. " %}
+					  {% trans "We recommend to format the SD-card with " %}<a href="https://www.sdcard.org/downloads/formatter_4/eula_windows/index.html">SDFormatter</a>
+					  {% trans "or any other similar application." %}
+					</p>
+			    </li>
+			    <li class="list-group-item">
+			        <h2 class="list-group-item-heading">{% trans "Third step: Configuring the LAN interface" %}</h2>
+			        <p class="list-group-item-text">{% trans "In the RaspImage, the configuration for the Raspberry interfaces comes pre-setup but still there are things to change. " %}
+			        {% trans "Basically, you'll need to configure the interface (Wireless or cable) you want it to use for connecting to your existing LAN network." %}
+			        {% trans "In order to do this, you should follow the next procedure:" %}
+			        </p>
+			        <p>{% trans "For a Wireless connection:" %}</p>
+			        <ul>
+			        	<li>{% trans "Open the network interfaces file" %} typing <code>sudo nano /etc/network/interfaces</code> 
+			        	{% trans "from the command line of the Raspberry (or directly editing the file from the SD) and change the settings for the static IP, gateway and mask" %}
+			        	<pre>
+			        	<code>
+#sudo nano /etc/network/interfaces
+auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet static
+address 192.168.1.155 # Your static IP you want 
+netmask 255.255.255.0 
+gateway 192.168.1.1   # IP of your router
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+			        	</code>
+			        	</pre>
+						</li>
+						<li>{% trans "Now open the wpa_supplicant.conf file" %} typing <code>sudo nano /etc/wpa_supplicant/wpa_supplicant.conf</code> 
+			        	{% trans "from the command line of the Raspberry (or directly editing the file from the SD) and change the settings for the Wifi SSID and password " %}
+			        	<pre>
+			        	<code>
+#sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+country=ES
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+network={ssid="YourWIFISSID"
+        psk="YourWIFIPASSW"}
+			        	</code>
+			        	</pre>
+						</li>
+					</ul>
+					<p>{% trans "For a cable connection:" %}</p>
+			        <ul>
+			        	<li>{% trans "Edit the network interfaces file to the following" %} 
+			        	<pre>
+			        		<code>
+#sudo nano /etc/network/interfaces
+iface eth0 inet static
+address 192.168.1.155 # Your static IP you want 
+netmask 255.255.255.0 
+gateway 192.168.1.1   # IP of your router
+			        		</code>
+			        	</pre>
+			    </li>
+			   </ul>
+			    <li class="list-group-item">
+			        <h2 class="list-group-item-heading">{% trans "Fourth step: Configuring Gunicorn" %}</h2>
+			        <p class="list-group-item-text">{% trans "In the RaspImage, Gunicorn is configured to target the Django application as it comes. " %}
+			        {% trans "This means that you should not modify the original folder structure otherwise it will not work unless you modify the gunicorn.service file accordingly." %}</p>
+			    	<pre>
+				    	<code>
+# EXAMPLE OF GUNICORN'S SERVICE FILE
+[Unit]
+Description=gunicorn daemon
+After=network.target
+
+[Service]
+User=pi
+Group=www-data
+WorkingDirectory=/home/pi/HomeAutomation/src
+ExecStart=/usr/local/bin/gunicorn --access-logfile - --workers 2 --bind unix:/home/pi/run/HomeAutomation.sock HomeAutomation.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
+						</code>
+					</pre>
+			    </li>
+			    <li class="list-group-item">
+			        <h2 class="list-group-item-heading">{% trans "Fifth step: Configuring Nginx" %}</h2>
+			        <p class="list-group-item-text">{% trans "In the RaspImage, Nginx is configured to listen on the port 80 (the standard for http requests) and " %}
+			        {% trans "to serve the static files from the Django application. This means that you should not modify the original folder structure otherwise " %}
+			        {% trans "it will not work unless you modify the Nginx.conf file accordingly." %}</p>
+			        <pre>
+				    	<code>
+# EXAMPLE OF NGINX'S CONFIGURATION FILE
+server {  
+    listen  80;
+
+    server_name your_dns_domain.net;	# I usually worked with no-ip
+    charset     utf-8;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+
+    location /static/ {
+	autoindex on;
+        alias /home/pi/HomeAutomation/site/static/;
+    }
+    location /media/{
+	autoindex on;
+	alias /home/pi/HomeAutomation/src/media/;
+    }
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/home/pi/run/HomeAutomation.sock;
+    }
+}
+# this other server is to access the web interface from inside the LAN
+server {  
+    listen  80;
+
+    server_name 192.168.0.160;	# the static IP assigned to the Raspberry
+    charset     utf-8;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+
+    location /static/ {
+	autoindex on;
+        alias /home/pi/HomeAutomation/site/static/;
+    }
+    location /media/{
+	autoindex on;
+	alias /home/pi/HomeAutomation/src/media/;
+    }
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/home/pi/run/HomeAutomation.sock;
+    }
+}
+
+server {
+    listen 80 default_server;
+    return 444;
+}
+						</code>
+					</pre>
+			    </li>
+		    </ul>
+		    
+		</div>
+	    
+	    <a class="btn btn-primary" href="{% url 'home' %}"  role="button">{% trans "Return to Main" %} &raquo;</a></p>
+</div><!-- /.container -->
+
+
+{% endblock container %}
+
+{% block scripts %}
+<script src="{% static 'site/js/site.js' %}"></script>	
+{% endblock scripts %}
+

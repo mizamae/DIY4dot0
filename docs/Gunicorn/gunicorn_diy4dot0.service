@@ -1,0 +1,12 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+
+[Service]
+User=pi
+Group=www-data
+WorkingDirectory=/home/pi/diy4dot0/src
+ExecStart=/usr/local/bin/gunicorn --access-logfile - --workers 2 --bind unix:/home/pi/run/diy4dot0.sock diy4dot0.wsgi:application
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,820 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: .\registereddevices.html:57 .\registereddevices.html:58
+#: .\registereddevices.html:59 .\registereddevices.html:66
+#: .\registereddevices.html:67 .\registereddevices.html:68
+#: .\registereddevices.html:75 .\registereddevices.html:76
+#: .\registereddevices.html:77 .\registereddevices.html:84
+#: .\registereddevices.html:85 .\registereddevices.html:86
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-03 22:45+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\_navbar.html:3 .\downloads.html:54
+msgid "Downloads"
+msgstr "Descargas"
+
+#: .\_navbar.html:4
+msgid "Standard devices"
+msgstr "Dispositivos estandard"
+
+#: .\_navbar.html:5
+msgid "About"
+msgstr "Acerca de"
+
+#: .\downloads.html:40
+msgid "List of releases"
+msgstr "Lista de versiones"
+
+#: .\downloads.html:41
+msgid ""
+"In the following table, you'll find all the available releases for the "
+"Master unit. Basically you can download the DjangoImage"
+msgstr "En la siguiente tabla encontrar&aacute;s las aplicaciones disponibles para "
+"la unidad Central. B&aacute;sicamente puedes descargarte una DjangoImage"
+
+#: .\downloads.html:42
+msgid ""
+" which contains the Django application source code and use it in any Master "
+"unit you desire; or you can download a RaspImage"
+msgstr " que contiene el c&oacute;digo fuente de la aplicaci&oacute;n de Django para que la uses en cualquier unidad Central "
+"que desees; o te puedes descargar una RaspImage"
+
+#: .\downloads.html:43
+msgid ""
+" that contains a fully operational Raspbian O.S. with the Django application "
+"configured to operate with an "
+msgstr " que contiene una versi&oacute;n totalmente operativa del sistema operativo Raspbian con la aplicaci&oacute;n de Django "
+"configurada para que funcione con un servidor "
+#: .\downloads.html:44
+msgid "server and "
+msgstr " y "
+
+#: .\downloads.html:44
+msgid "This pre-configured image is the simplest and fastest"
+msgstr "Esta imagen pre-configurada es la forma mas sencilla y r&aacute;pida"
+
+#: .\downloads.html:45
+msgid " way to start a "
+msgstr " de empezar una "
+
+#: .\downloads.html:45
+msgid " installation."
+msgstr " instalaci&oacute;n."
+
+#: .\downloads.html:51
+msgid "Release date"
+msgstr "Fecha de la versi&oacute;n"
+
+#: .\downloads.html:52
+msgid "Release name"
+msgstr "Nombre de la versi&oacute;n"
+
+#: .\downloads.html:53
+msgid "Change log"
+msgstr "Lista de cambios"
+
+#: .\downloads.html:62
+msgid "DjangoImage"
+msgstr ""
+
+#: .\downloads.html:63
+msgid "RaspImage"
+msgstr ""
+
+#: .\downloads.html:68 .\registereddevices.html:93
+msgid "Return to Main"
+msgstr "Volver "
+
+#: .\home.html:25
+msgid "Knowledge is power..."
+msgstr "Conocer es poder..."
+
+#: .\home.html:37 .\home.html:55
+msgid "No internet connection detected..."
+msgstr "No se ha detectado conexi&oacute;n a internet..."
+
+#: .\home.html:39
+msgid "and we want to empower you"
+msgstr "y queremos darte el poder"
+
+#: .\home.html:40
+msgid "with an open-hardware environment"
+msgstr "mediante un ecosistema de dispositivos de hardware abierto"
+
+#: .\home.html:41
+msgid "that will gather tons of information about your daily life."
+msgstr ""
+"que recoger&aacute; toneladas de informaci&oacute;n sobre tu vida diaria."
+
+#: .\home.html:42
+msgid "Wanna see more?"
+msgstr "&iquest;Quieres ver mas?"
+
+#: .\home.html:53
+msgid "OK great! you want to see more right?"
+msgstr "&iexcl;Genial! &iquest;Quieres ver mas no?"
+
+#: .\home.html:54
+msgid "What if I would tell you that you will know..."
+msgstr "Que tal si te dijera que podr&iacute;as conocer..."
+
+#: .\home.html:57
+msgid "your electricity consumption pattern."
+msgstr "tu patr&oacute;n de consumo el&eacute;ctrico."
+
+#: .\home.html:58
+msgid "your heating operation across the day."
+msgstr "el funcionamiento de tu calefacci&oacute;n a lo largo del dia."
+
+#: .\home.html:59
+msgid "the temperature and humidity anywhere in your house."
+msgstr "la temperatura y humedad ambiental en tu casa."
+
+#: .\home.html:60
+msgid "who and when enters/leaves home."
+msgstr "qui&eacute;n y cuando entra/sale de tu casa."
+
+#: .\home.html:61
+msgid "and anything else you can imagine..."
+msgstr "y cualquier otra cosa que te imagines..."
+
+#: .\home.html:113
+msgid "Motivation"
+msgstr "Motivaci&oacute;n"
+
+#: .\home.html:114
+msgid ""
+"This open-source and open-hardware project is the result of a continuous "
+"necessity to learn and explore new horizonts."
+msgstr ""
+
+#: .\home.html:116
+msgid ""
+"As knowledge is power, this project will empower its user since it will "
+"allow him/her to gather tons of information about anything "
+msgstr ""
+
+#: .\home.html:117
+msgid "that can be measured around him/her. "
+msgstr ""
+
+#: .\home.html:127
+msgid "Project description"
+msgstr ""
+
+#: .\home.html:128
+msgid ""
+"In a general way, it pretends to implement a simple and affordable, yet "
+"powerful, data acquisition environment based on "
+msgstr ""
+
+#: .\home.html:129
+msgid " open-hardware platforms such as "
+msgstr ""
+
+#: .\home.html:129
+msgid " and "
+msgstr ""
+
+#: .\home.html:131
+msgid ""
+"The project consist of a Master unit (usually a Raspberry) that is in charge "
+"of basically controlling everything. Around it, several Slave devices "
+"(usually Arduinos)"
+msgstr ""
+
+#: .\home.html:132
+msgid ""
+" will be waiting for a query from the Master unit. When a proper query "
+"reaches an Slave device, it responds with an XML datagram "
+msgstr ""
+
+#: .\home.html:133
+msgid ""
+" containing the requested information. The Master unit stores the "
+"information in a database and this is all, simple isn't it??"
+msgstr ""
+
+#: .\home.html:135
+msgid ""
+"Somebody at this point will be probably asking: Why shouldn't you use the "
+"trendy "
+msgstr ""
+
+#: .\home.html:135
+msgid "protocol??"
+msgstr ""
+
+#: .\home.html:136
+msgid ""
+"My first answer will be just because I wanted... Because I wanted to keep it "
+"simple!!"
+msgstr ""
+
+#: .\home.html:138
+msgid ""
+"Using MQTT protocol will require to configure it on every single piece of "
+"equipment living in the environment, thus making it more"
+msgstr ""
+
+#: .\home.html:139
+msgid ""
+" difficult to setup. On the contrary, with the XML exchange architecture, "
+"only the Master unit needs to be configured in certain way, and"
+msgstr ""
+
+#: .\home.html:140
+msgid " the Slave devices are just it, slaves."
+msgstr ""
+
+#: .\home.html:142
+msgid ""
+"The communication between the Master and the Slaves will be defined in the "
+"<b>main XML file</b> resident in the Master unit. The information send by "
+"the Slaves is contained "
+msgstr ""
+
+#: .\home.html:143
+msgid ""
+"within a so called <b>datagram</b>. Each Slave may have more than one "
+"datagram with different information, sampling times, etc. "
+msgstr ""
+
+#: .\home.html:144
+msgid ""
+"In the <b>main XML file</b>, the communications between the Master and the "
+"Slaves are defined by means of the following parameters:"
+msgstr ""
+
+#: .\home.html:147
+msgid "Sampling time of the datagram"
+msgstr ""
+
+#: .\home.html:148
+msgid "Byte-format code of the datagram"
+msgstr ""
+
+#: .\home.html:149
+msgid "Request label of the datagram"
+msgstr ""
+
+#: .\home.html:150
+msgid "Definition of each of the data contained"
+msgstr ""
+
+#: .\home.html:152
+msgid "The data in the datagrams can be of three types basically:"
+msgstr ""
+
+#: .\home.html:154
+msgid "Integer (byte)"
+msgstr ""
+
+#: .\home.html:155
+msgid "Integer with bit decoding (byte)"
+msgstr ""
+
+#: .\home.html:156
+msgid "Float (4x byte)"
+msgstr ""
+
+#: .\home.html:165
+msgid "Learning objectives"
+msgstr ""
+
+#: .\home.html:166
+msgid ""
+"Eventhough it may seem that the main objective of this project is to gather "
+"information about habits, daily patterns, etc, actually it is"
+msgstr ""
+
+#: .\home.html:167
+msgid " not. The main and initial objective of the project was diving into "
+msgstr ""
+
+#: .\home.html:168
+msgid ""
+" One thing took to another and finally this project was raised. If one "
+"decides to accept the challenge of getting involved in this project (as a "
+"developer),"
+msgstr ""
+
+#: .\home.html:169
+msgid " he/she will gain expertise and knowledge in the follwoing fields: "
+msgstr ""
+
+#: .\home.html:172
+msgid "Programming in Python"
+msgstr ""
+
+#: .\home.html:173
+msgid "Programming in JavaScript"
+msgstr ""
+
+#: .\home.html:174
+msgid "Programming HTML & CSS"
+msgstr ""
+
+#: .\home.html:175
+msgid "Hints on Linux OS"
+msgstr ""
+
+#: .\home.html:176
+msgid "Programming C++ for Arduino"
+msgstr ""
+
+#: .\home.html:178
+msgid "Seems interesting humm??"
+msgstr ""
+
+#: .\home.html:187
+msgid "Project roadmap"
+msgstr ""
+
+#: .\home.html:188
+msgid ""
+"This project started in May 2017 and it never expects to be finished since a "
+"continuous development phylosophy is laying behind it."
+msgstr ""
+
+#: .\home.html:189
+msgid ""
+"Eventhough it is an open-source and open-hardware project, it is being "
+"carefully developed and tested following industrial procedures "
+msgstr ""
+
+#: .\home.html:190
+msgid "that hopefully will end up in a robust and stable first release."
+msgstr ""
+
+#: .\home.html:192
+msgid "The minimum features required for the very first release are:"
+msgstr ""
+
+#: .\home.html:195
+msgid ""
+"Fully operational device detection and configuration (via Web interface)."
+msgstr ""
+
+#: .\home.html:196
+msgid ""
+"Fully operational device interrogation and data storage (using SQLite DB)."
+msgstr ""
+
+#: .\home.html:197
+msgid "Web interface to view data from devices."
+msgstr ""
+
+#: .\home.html:199
+msgid ""
+"and its target deadline is set by end September 2017. By this date, an "
+"operating environment consisting of a Master unit and at "
+msgstr ""
+
+#: .\home.html:200
+msgid "least one Slave device should be up and running."
+msgstr ""
+
+#: .\registereddevices.html:40
+#, fuzzy
+#| msgid "View devices"
+msgid "List of devices"
+msgstr "Ver dispositivos"
+
+#: .\registereddevices.html:54
+#, fuzzy
+#| msgid "Device IP"
+msgid "Device1"
+msgstr "Direcci&oacute;n IP"
+
+#: .\registereddevices.html:55 .\registereddevices.html:64
+#: .\registereddevices.html:73 .\registereddevices.html:82
+msgid "Main characteristics:"
+msgstr ""
+
+#: .\registereddevices.html:60 .\registereddevices.html:69
+#: .\registereddevices.html:78 .\registereddevices.html:87
+msgid "More details..."
+msgstr ""
+
+#: .\registereddevices.html:63
+#, fuzzy
+#| msgid "Device IP"
+msgid "Device2"
+msgstr "Direcci&oacute;n IP"
+
+#: .\registereddevices.html:72
+#, fuzzy
+#| msgid "Device IP"
+msgid "Device3"
+msgstr "Direcci&oacute;n IP"
+
+#: .\registereddevices.html:81
+#, fuzzy
+#| msgid "Device IP"
+msgid "Device4"
+msgstr "Direcci&oacute;n IP"
+
+#: .\registration\logged_out.html:9
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr ""
+
+#: .\registration\logged_out.html:11
+msgid "Log in again"
+msgstr "Logu&eacute;ate de nuevo"
+
+#: .\registration\password_change_done.html:6
+#: .\registration\password_change_form.html:6
+#: .\registration\password_reset_complete.html:6
+#: .\registration\password_reset_confirm.html:6
+#: .\registration\password_reset_done.html:6
+#: .\registration\password_reset_form.html:6
+msgid "Home"
+msgstr "Home"
+
+#: .\registration\password_change_done.html:7
+#: .\registration\password_change_form.html:7
+#: .\registration\password_change_form.html:11
+#: .\registration\password_change_form.html:12
+msgid "Password change"
+msgstr "Cambiar contrase&ntilde;a"
+
+#: .\registration\password_change_done.html:11
+#: .\registration\password_change_done.html:12
+msgid "Password change successful"
+msgstr "Contrase&ntilde;a cambiada correctamente"
+
+#: .\registration\password_change_done.html:16
+msgid "Your password was changed."
+msgstr "Tu Contrase&ntilde;a se ha cambiado."
+
+#: .\registration\password_change_form.html:19
+msgid "Please correct the error below."
+msgstr "Por favor, corrige el siguiente error."
+
+#: .\registration\password_change_form.html:19
+msgid "Please correct the errors below."
+msgstr "Por favor, corrige los siguientes errores."
+
+#: .\registration\password_change_form.html:23
+msgid ""
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr ""
+"Por favor mete tu contrase&ntilde;a antigua por seguridad, y a "
+"continuaci&oacute;n la nuevacontrase&ntilde;a dos veces para garantizar que "
+"la has escrito correctamente."
+
+#: .\registration\password_change_form.html:63
+#: .\registration\password_reset_confirm.html:42
+msgid "Change my password"
+msgstr "Cambiar mi contrase&ntilde;a"
+
+#: .\registration\password_reset_complete.html:7
+#: .\registration\password_reset_complete.html:11
+#: .\registration\password_reset_complete.html:12
+msgid "Password reset complete"
+msgstr "La contrase&ntilde;a se ha reseteado"
+
+#: .\registration\password_reset_complete.html:16
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr "Tu contrase&ntilde;a se ha registrado. Ya puedes seguir y loguearte."
+
+#: .\registration\password_reset_complete.html:18
+msgid "Log in"
+msgstr "Log in"
+
+#: .\registration\password_reset_confirm.html:7
+msgid "Password reset confirmation"
+msgstr "Confirmaci&oacute;n de contrase&ntilde;a reseteada"
+
+#: .\registration\password_reset_confirm.html:11
+#: .\registration\password_reset_confirm.html:12
+#: .\registration\password_reset_done.html:7
+#: .\registration\password_reset_form.html:7
+#: .\registration\password_reset_form.html:11
+#: .\registration\password_reset_form.html:12
+msgid "Password reset"
+msgstr ""
+
+#: .\registration\password_reset_confirm.html:18
+msgid "Enter new password"
+msgstr "Contrase&ntilde;a reseteada"
+
+#: .\registration\password_reset_confirm.html:20
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+"Por favor mete tu contrase&ntilde;a nueva dos veces para garantizar que la "
+"has escrito correctamente."
+
+#: .\registration\password_reset_confirm.html:25
+msgid "New password:"
+msgstr "Contrase&ntilde;a nueva"
+
+#: .\registration\password_reset_confirm.html:34
+msgid "Confirm password:"
+msgstr "Confirmar contrase&ntilde;a"
+
+#: .\registration\password_reset_confirm.html:48
+msgid "Password reset unsuccessful"
+msgstr "Error en el reseteo de contrase&ntilde;a"
+
+#: .\registration\password_reset_confirm.html:50
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: .\registration\password_reset_done.html:11
+#: .\registration\password_reset_done.html:12
+msgid "Password reset successful"
+msgstr "contrase&ntilde;a reseteada con exito"
+
+#: .\registration\password_reset_done.html:16
+msgid ""
+"We've emailed you instructions for setting your password to the email "
+"address you submitted. You should be receiving it shortly."
+msgstr ""
+
+#: .\registration\password_reset_form.html:16
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr ""
+"&iquest;Has olvidado tu contrase&ntilde;a? Introduce tu email y te "
+"mandar&eacute; un malcon intrucciones para establecer una nueva."
+
+#: .\registration\password_reset_form.html:21
+msgid "Email address:"
+msgstr "Direcci&oacute;n Email"
+
+#: .\registration\password_reset_form.html:30
+msgid "Reset my password"
+msgstr "Resetea mi contrase&ntilde;a"
+
+#~ msgid "Download"
+#~ msgstr "Descarga"
+
+#~ msgid "file"
+#~ msgstr "archivo"
+
+#~ msgid "Graphs for the device "
+#~ msgstr "Gr&aacute;ficas del dispositivo "
+
+#~ msgid "Graphs from a device"
+#~ msgstr "Gr&aacute;ficas del dispositivo"
+
+#~ msgid "Meet The Team"
+#~ msgstr "Conoce al equipo"
+
+#~ msgid "Original developer"
+#~ msgstr "Promotor"
+
+#~ msgid "Visual interface designer"
+#~ msgstr "Dise&ntilde;adora de la interfaz visual"
+
+#~ msgid "Adding a new device"
+#~ msgstr "A&ntilde;adir dispositivos"
+
+#~ msgid "Following the steps below,"
+#~ msgstr "Siguiendo los siguientes pasos,"
+
+#~ msgid "the process of registering a new compatible device "
+#~ msgstr "el proceso de registrar un nuevo dispositivo compatible "
+
+#~ msgid "is like stealing a sweet to a 2 year old kid."
+#~ msgstr "es como robar un caramelo a un ni&ntilde;o de 2 a&ntilde;os."
+
+#~ msgid "Configure the device at IP address 10.10.10.0"
+#~ msgstr "Configura el dispositivo con la direccion IP 10.10.10.0"
+
+#~ msgid "Done!"
+#~ msgstr "&iexcl;Hecho!"
+
+#~ msgid "Hit this button to scan for the device at IP 10.10.10.0"
+#~ msgstr ""
+#~ "Pulsa este bot&oacute;n para buscar el dispositivo en la IP 10.10.10.0"
+
+#~ msgid "Scan "
+#~ msgstr "Buscar"
+
+#~ msgid "Setup the device name"
+#~ msgstr "Introduce el nombre del dispositivo"
+
+#~ msgid "Edit the configuration file"
+#~ msgstr "Editar el archivo de configuraci&oacute;n"
+
+#~ msgid "Here you can edit the configuration file for this application."
+#~ msgstr ""
+#~ "Aqu&iacute; puedes editar el archivo de configuraci&oacute;n de esta "
+#~ "aplicacion."
+
+#~ msgid "Generate Arduino code"
+#~ msgstr "Generar c&oacute;digo Arduino"
+
+#~ msgid ""
+#~ "Here the Arduino source code templates for the devices you have "
+#~ "configured in the xml file will be generated."
+#~ msgstr ""
+#~ "Aqui podras generar plantillas de c&oacute;digo Arduino para los "
+#~ "dispositivos que tengasconfigurados en el archivo xml de "
+#~ "configuraci&oacute;n."
+
+#~ msgid "Let's do it"
+#~ msgstr "Vamos!"
+
+#~ msgid "Let's go"
+#~ msgstr "Vamos!"
+
+#~ msgid "Please log in if you want to do something else..."
+#~ msgstr "Por favor, logueate si quieres hacer algo mas..."
+
+#~ msgid "Compatible devices"
+#~ msgstr "Dispositivos compatibles"
+
+#~ msgid "Here you can see all the "
+#~ msgstr "Aqu&iacute; puedes ver todos los "
+
+#~ msgid " compatible devices"
+#~ msgstr " dispositivos compatibles"
+
+#~ msgid " device's design guide"
+#~ msgstr " guia de dise&ntilde;o del dispositivo"
+
+#~ msgid "Here you can follow a step by step procedure to create a fully "
+#~ msgstr ""
+#~ "Aqu&iacute; puedes seguir un procedimiento paso a paso para crear un "
+#~ "dispositivo compatible con "
+
+#~ msgid "compatible device."
+#~ msgstr "."
+
+#~ msgid "View the guide"
+#~ msgstr "Ver el manual"
+
+#~ msgid "Reports"
+#~ msgstr "Informes"
+
+#~ msgid "Here you can revise and analize the data gathered from your devices."
+#~ msgstr ""
+#~ "Aqui puedes revisar y analizar la informacion obtenida por tus "
+#~ "dispositivos."
+
+#~ msgid "View reports"
+#~ msgstr "Ver informes"
+
+#~ msgid "Register new device"
+#~ msgstr "Registrar un nuevo dispositivo"
+
+#~ msgid "Here you can setup a new "
+#~ msgstr "Aqu&iacute; puedes configurar un nuevo dispositivo compatible con "
+
+#~ msgid " compatible device"
+#~ msgstr " dispositivo compatible"
+
+#~ msgid ""
+#~ "Here you can see all the devices that are currently configured in your "
+#~ "installation. You can start or stop the polling on a certain device."
+#~ msgstr ""
+#~ "Aqu&iacute; puedes ver todos los dispositivos que hay configurados "
+#~ "actualmente en tu instalaci&oacute;n. Puedes iniciar o detener el "
+#~ "registro de un determinado dispositivo."
+
+#, fuzzy
+#~| msgid "Configure new report "
+#~ msgid "Configure reports"
+#~ msgstr "Configurar nuevo informe "
+
+#, fuzzy
+#~| msgid ""
+#~| "Here you can see the charts with the information recorded from your "
+#~| "devices from the very beginning."
+#~ msgid ""
+#~ "Here you can configure tailor-made reports showing the information from "
+#~ "any of your devices."
+#~ msgstr ""
+#~ "Aqu&iacute; puedes ver la informaci&oacute;n registrada por tus "
+#~ "dispositivos desde el instante inicial."
+
+#~ msgid "Device historic plots"
+#~ msgstr "Gr&aacute;ficas de un dispositivo"
+
+#~ msgid ""
+#~ "Here you can see the charts with the information recorded from your "
+#~ "devices from the very beginning."
+#~ msgstr ""
+#~ "Aqu&iacute; puedes ver la informaci&oacute;n registrada por tus "
+#~ "dispositivos desde el instante inicial."
+
+#~ msgid "View plots"
+#~ msgstr "Ver gr&aacute;ficos"
+
+#~ msgid "Advanced features"
+#~ msgstr "Acciones avanzadas"
+
+#, fuzzy
+#~| msgid "Here you can setup a new "
+#~ msgid "Here you can do some advanced stuff."
+#~ msgstr "Aqu&iacute; puedes configurar un nuevo dispositivo compatible con "
+
+#~ msgid "Let me in"
+#~ msgstr "Dejame entrar"
+
+#~ msgid "SAVE REPORT"
+#~ msgstr "GUARDAR INFORME"
+
+#~ msgid "Return to Main "
+#~ msgstr "Volver "
+
+#~ msgid "Configure new report "
+#~ msgstr "Configurar nuevo informe "
+
+#~ msgid "Title for the report "
+#~ msgstr "T&iacute;tulo del informe "
+
+#~ msgid "Add new chart"
+#~ msgstr "A&ntilde;adir gr&aacute;fico"
+
+#~ msgid "Selection for chart "
+#~ msgstr "Seleccion para el gr&aacute;fico "
+
+#~ msgid " Remove chart "
+#~ msgstr " Eliminar grafico "
+
+#~ msgid "Title : "
+#~ msgstr "Titulo : "
+
+#~ msgid "Selectable items"
+#~ msgstr "Items seleccionables"
+
+#~ msgid "Selected items"
+#~ msgstr "Items seleccionados"
+
+#~ msgid "Found"
+#~ msgstr "Encontrado"
+
+#~ msgid "Device registered OK with the name"
+#~ msgstr "Dispositivo registrado correctamente con nombre"
+
+#~ msgid "Something failed"
+#~ msgstr "Algo ha fallado"
+
+#~ msgid "Back"
+#~ msgstr "Volver"
+
+#~ msgid "No device found."
+#~ msgstr "No se ha encontrado ning&uacute;n dispositivo"
+
+#~ msgid "Device type"
+#~ msgstr "Tipo de dispositivo"
+
+#~ msgid "Device state"
+#~ msgstr "Estado del dispositivo"
+
+#~ msgid "Delete device"
+#~ msgstr "Eliminar dispositivo"
+
+#~ msgid "Last updated"
+#~ msgstr "Ultima actualizaci&oacute;"
+
+#~ msgid "Device webpage"
+#~ msgstr "Web del dispositivo"
+
+#~ msgid "Device Name"
+#~ msgstr "Nombre del dispositivo"
+
+#~ msgid "RUN"
+#~ msgstr "MARCHA"
+
+#~ msgid "STOP"
+#~ msgstr "PARO"
+
+#~ msgid "Advanced"
+#~ msgstr "Avanzado"
+
+#~ msgid "There are no registered devices in the installation."
+#~ msgstr "No hay dispositivos registrados en la instalaci&oacute;n"
+
+#~ msgid ""
+#~ "This page automatically refreshes every 10 seconds to update the devices "
+#~ "data"
+#~ msgstr ""
+#~ "Esta p&aacute;gina se refresca autom&aacute;ticamente cada 10 segundos "
+#~ "para actualizar la informaci&oacute;n de los dispositivos"

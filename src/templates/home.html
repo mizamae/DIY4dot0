@@ -1,0 +1,247 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+
+
+{% block title %}{{ block.super }}Home{% endblock %}
+
+{% block navbar-left %}
+  {% include "_navbar.html" with active_link="home" %}
+{% endblock %}
+
+{% block splash %}
+
+{% get_current_language as LANGUAGE_CODE %}
+<!-- Current language: {{ LANGUAGE_CODE }} -->
+
+<div id="myCarousel" class="carousel home-slide-carousel" data-interval="false">
+	<div class="carousel-inner">
+        <div class="item active">
+        	<div class="jumbotron home-jumbo">
+	          <div class="row" style="height:20%;">
+	          	<div class="col-lg-6">
+			      <h1 class="jumbotron-h1-left">{% trans "Knowledge is power..." %}</h1>
+			    </div>
+	          </div>
+	          <div class="row" style="height:20%;">
+	          	<div class="col-lg-6" style="height:100%;">			      
+			    </div>
+	          </div>
+	          <div class="row" style="height:33%;">
+	          	<div class="col-lg-6">
+			      <h1></h1>
+			    </div>
+	          	<div class="col-lg-6" style="max-height:100%;">
+			      <h1 class="jumbotron-h1-right"><span id="rotate0">{% trans "No internet connection detected..." %}</span></h1>
+			      <ul class="home-jumbo-ul0" style="display:none">
+					<li>{% trans "and we want to empower you" %}</li>
+					<li>{% trans "with an open-hardware environment" %}</li>
+					<li>{% trans "that will gather tons of information about your daily life." %}</li>
+					<li>{% trans "Wanna see more?" %}</li>
+					<li></li>
+				  </ul>
+			    </div>
+	          </div>
+	        </div>
+        </div>
+        <div class="item">
+        	<div class="jumbotron home-jumbo">
+	        	<div class="row">
+		          	<div class="col-lg-6">
+				      <h1 class="jumbotron-h1-left">{% trans "OK great! you want to see more right?" %}</h1>
+				      <h2>{% trans "What if I would tell you that you will know..." %}</h2>
+				      <h2><span id="rotate1">{% trans "No internet connection detected..." %}</span></h2>
+				      <ul class="home-jumbo-ul1" style="display:none">
+						<li>{% trans "your electricity consumption pattern." %}</li>
+						<li>{% trans "your heating operation across the day." %}</li>
+						<li>{% trans "the temperature and humidity anywhere in your house." %}</li>
+						<li>{% trans "who and when enters/leaves home." %}</li>
+						<li>{% trans "and anything else you can imagine..." %}</li>
+						<li></li>
+					  </ul>
+				    </div>
+				    <div class="col-lg-6" style="height:250px;">
+				      	<img id="rotate_img" class="rotate_img" src="{% static 'site/img/rotating_image0.png' %}" alt="My image" style="min-width:80%;height:100%;">
+				    </div>
+		        </div>   
+		    </div>
+        </div>
+        <div class="item">
+        </div>
+	</div>
+	<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    	<span class="sr-only">Previous</span>
+	</a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    	<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    	<span class="sr-only">Next</span>
+    </a>
+    <ol class="carousel-indicators home-slide-carousel-indicators">
+	    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	    <li data-target="#myCarousel" data-slide-to="1"></li>
+	    <li data-target="#myCarousel" data-slide-to="2"></li>
+  	</ol>
+</div>
+
+{% endblock splash %}
+
+{% block extrahead %}
+    <style>
+    .btn {
+    	font-size: 12px;
+    }
+    .home-slide-carousel{
+    	margin-left:0.5%;
+    	margin-top:1em;
+    	}
+    </style>
+	
+	<script src="{% static 'RGraph/RGraph.common.core.js' %}"></script>
+	<script src="{% static 'RGraph/RGraph.gantt.js' %}"></script>
+{% endblock extrahead %}
+
+{% block container %}
+<!-- Benefits of the Django application -->
+<a name="about"></a>
+
+	<div class="container home-container">
+	  <div class="row">
+	    <div class="col-lg-6">
+	      <h2>{% trans "Motivation" %}</h2>
+	      	<p>{% trans "This open-source and open-hardware project is the result of a continuous necessity to learn and explore new horizonts." %}
+			</p>
+	      	<p>{% trans "As knowledge is power, this project will empower its user since it will allow him/her to gather tons of information about anything " %}
+ 			{% trans "that can be measured around him/her. " %}
+			</p>
+			<p>{% trans "By the way, do never forget that everything concerning Django and Python " %}
+ 			{% trans "may be implemented in some other (much more efficient) way since this is my baptismal project." %}
+			</p>
+	    </div>
+	     <div class="text-center col-lg-6" style="height:300px;margin-top:2%;left:5%;">
+				<img id="learning" class="rotate_img" src="{% static 'site/img/idea.png' %}" alt="Idea" style="min-width:80%;height:100%;">
+	    </div>
+	   </div>
+	   <div class="row">
+	    <div class="col-lg-6">
+	      <h2>{% trans "Project description" %}</h2>
+	      	<p>{% trans "In a general way, it pretends to implement a simple and affordable, yet powerful, data acquisition environment based on " %}
+			{% trans " open-hardware platforms such as "%} <a href="https://www.arduino.cc/" target="_blank">Arduino</a> {% trans " and " %} 
+			<a href="https://www.raspberrypi.org/" target="_blank">Raspberry.</a></p>
+	      	<p>{% trans "The project consist of a Master unit (usually a Raspberry) that is in charge of controlling everything. Around it, several Slave devices (usually Arduinos)" %}
+ 			{% trans " will be waiting for an HTTP query from the Master unit. When a proper query reaches an Slave device, it responds with an XML datagram " %}
+			{% trans " containing the requested information. The Master unit stores the information in a database and this is all, simple isn't it??"  %}
+			{% trans "Somebody at this point will be probably asking: Why shouldn't you use the trendy "%} <a href="http://mqtt.org/" target="_blank">MQTT</a> {% trans " infrastructure??" %}
+			</p>
+ 			<p>{% trans "My first answer will be just because I wanted... Because I wanted to keep it extremely simple!!" %}
+ 			</p>
+			<p>{% trans "Using MQTT protocol will require to configure it on every single piece of equipment living in the environment, thus making it more" %}
+			{% trans " difficult to setup. On the contrary, with the XML exchange architecture, only the Master unit needs to be configured in certain way, and" %}
+			{% trans " the Slave devices are just it, slaves. 
+			</p>
+			<p>{% trans "The communication between the Master and the Slaves will be defined in the <b>main XML file</b> resident in the Master unit. The information sent by the Slaves is contained " %}
+			{% trans "within a so called <b>datagram</b>. Each Slave may have more than one datagram with different information, sampling times, etc. " %}
+			{% trans "In the <b>main XML file</b>, the communications between the Master and the Slaves are defined by means of the following parameters:" %}
+			</p>
+			<ul>
+			  <li>{% trans "Sampling time of the datagram" %}</li>
+			  <li>{% trans "Byte-format code of the datagram" %}</li>
+			  <li>{% trans "Request label of the datagram" %}</li>
+			  <li>{% trans "Definition of each of the data contained" %}</li>
+			</ul>
+			<p>{% trans "The data in the datagrams can be of three types basically:" %}</p>
+			<ul>
+			  <li>{% trans "Integer (byte)" %}</li>
+			  <li>{% trans "Integer with bit decoding (byte)" %}</li>
+			  <li>{% trans "Float (4x byte)" %}</li>
+			</ul>
+			<p>{% trans "Moreover, in the initial release there will be a feature that will generate automatic Arduino code templates "  %}
+			{% trans " based on the information placed in the <b>main XML file</b>. "  %}
+			</p>
+	    </div>
+	    <div class="text-center col-lg-6" style="padding-top:2%">
+	    </div>
+	   </div>
+	   <div class="row">
+	    <div class="col-lg-6">
+	      <h2>{% trans "Learning objectives" %}</h2>
+	      	<p>{% trans "Eventhough it may seem that the main objective of this project is to gather information about habits, daily patterns, etc, actually it is" %}
+ 			{% trans " not. The main and initial objective of the project was diving into " %} <a href="https://www.python.org/" target="_blank">Python.</a>
+			{% trans " One thing took to another and finally this project was raised. If one decides to accept the challenge of getting involved in this project (as a developer or a power-user)," %}
+			{% trans " he/she will gain expertise and knowledge in the follwoing fields: " %}
+			</p>
+			<ul>
+			  <li>{% trans "Programming in Python" %}</li>
+			  <li>{% trans "Programming in JavaScript" %}</li>
+			  <li>{% trans "Programming HTML & CSS" %}</li>
+			  <li>{% trans "Hints on Linux OS" %}</li>
+			  <li>{% trans "Programming C++ for Arduino" %}</li>
+			</ul>
+			<p>{% trans "Seems interesting humm??" %}
+			</p>
+	    </div>
+	    <div class="text-center col-lg-6" style="height:300px;margin-top:2%;left:5%;">
+				<img id="learning" class="rotate_img" src="{% static 'site/img/Learning_objectives.png' %}" alt="Learning objectives" style="min-width:80%;height:100%;">
+		</div>
+	   </div>
+	   <div class="row">
+	    <div class="col-lg-6">
+	      <h2>{% trans "Project roadmap" %}</h2>
+	      	<p>{% trans "This project started in May 2017 and it never expects to be finished since a continuous development phylosophy is laying behind it." %}
+	      	{% trans "Eventhough it is an open-source and open-hardware project, it is being carefully developed and tested following industrial procedures " %}
+	      	{% trans "that hopefully will end up in a robust and stable first release." %}
+	      	</p>
+	      	<p>{% trans "The minimum features required for the very first release are:" %}</p>
+	      	<ul>
+			  <li>{% trans "Fully operational device detection and configuration (via Web interface)." %}</li>
+			  <li>{% trans "Fully operational device interrogation and data storage (using SQLite DB)." %}</li>
+			  <li>{% trans "Web interface to view data from devices." %}</li>
+			</ul>
+	      	<p>{% trans "and its target deadline is set by end September 2017. By this date, an operating environment consisting of a Master unit and at " %}
+	      	{% trans "least one Slave device should be up and running." %}
+	      	</p>
+	    </div>
+	    <div class="text-center col-lg-6">
+			<canvas id="cvs" width="550" height="350" >[No canvas support]</canvas>
+	    </div>
+	  </div>
+	</div>
+
+{% endblock container %}
+
+{% block scripts %}
+<script src="{% static 'site/js/site.js' %}"></script>	
+
+<script>
+    window.onload = function ()
+    {
+        var data = [
+            [0,2,null,'Project \n definition','green'],
+            [2,8,null,'Programming \n Main unit','green'],
+            [10,3,null,'Loopback tests','green'],
+            [13,2,null,'Programming\n Arduino','black'],
+            [15,3,null,'Main unit and\n Slave device tests','black'],
+
+        ];
+
+        var gantt = new RGraph.Gantt
+        ({
+            id: 'cvs',
+            data: data,
+            options: {
+                borders: false,
+                gutterLeft:120,
+                gutterRight:0,
+                xmax: 20,
+                labels: ['May', 'June', 'July', 'August','September'],
+                backgroundGridAutofitNumhlines: 6,
+                backgroundGridAutofitNumvlines: 30,
+                textAccessible: true
+            }
+        }).grow();
+    };
+</script>
+{% endblock scripts %}
+
